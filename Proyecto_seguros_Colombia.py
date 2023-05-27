@@ -3,10 +3,19 @@ from tkinter import messagebox
 import random
 
 ventana_principal=Tk()
-ventana_principal.geometry("1200x600")
-ventana_principal.title("Aseguradoras")
+ventana_principal.geometry("1250x650")
+ventana_principal.title("Aseguradoras", )
 ventana_principal.resizable(0,0)
 ventana_principal.config(bg="white")
+
+frame_imagen=Frame(ventana_principal)
+frame_imagen.config(bg="white", width=1250, height=750)
+frame_imagen.place(x=0, y=0)
+
+imagen_1 = PhotoImage(file="seguro.png")
+lb_imagen_1= Label(frame_imagen, image=imagen_1)
+lb_imagen_1.place(x=0, y=0)
+
 
 titulo = Label(ventana_principal, text="Comparador y Recomendador de aseguradoras de Colombia")
 titulo.config(bg = "white",fg="black", font=("Helvetica", 20))
